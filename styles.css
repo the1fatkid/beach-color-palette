@@ -1,0 +1,151 @@
+body{
+    height:100vh;
+    background-image: url(beach.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: monospace;
+    overflow: hidden;
+}
+h1{
+    position: absolute;
+    right:40px;
+    font-size: 2rem;
+    color:rgba(255, 255, 255, 0.9);
+    z-index:3;
+}
+h1:hover{
+    text-decoration: 2px solid underline;
+    color:white;
+}
+p{
+    position: absolute;
+    right:50px;
+    top:70px;
+    color:white;
+}
+#check{
+    display: none;
+}
+div.click{
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    z-index:2;
+}
+.colorPalette{
+    display:flex;
+    justify-content: center;
+}
+.color{
+    height:120px;
+    width:120px;
+    text-align: center;
+    margin-right: 30px;
+    line-height: 120px;
+    font-size:1rem;
+    position:relative;
+    z-index:3;
+    top:-150px;
+}
+.color:last-of-type{
+    margin-right: 0;
+}
+
+.one{
+    background-color: #d0c3b8;
+    /* top:-150px; */
+    transition: top 0.3s ease-in;
+}
+.two{
+    background-color: #dbad9b;
+    /* top:-150px; */
+    transition: top 0.6s ease-in;
+}
+.three{
+    background-color: #6f8686;
+    /* top:-150px; */
+    transition: top 0.9s ease-in;
+}
+.four{
+    background-color: #265B59;
+    /* top:-150px; */
+    transition: top 1.2s ease-in;
+}
+.five{
+    background-color: #012A30;
+    color:#347b79;
+    /* top:-150px; */
+    transition: top 1.5s ease-in;
+}
+.one:hover, .two:hover, .three:hover, .four:hover, .five:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 4px 4px grey;
+}
+
+#check:checked ~ .colorPalette .color{
+    top:290px;
+}
+
+@media(max-width:768px){
+    .color{
+        height:80px;
+        width:80px;
+        line-height: 80px;
+    }
+}
+@media(max-width:576px){
+    .colorPalette{
+        flex-direction: column;
+    }
+    .color{
+        position:absolute;
+        margin-right:0;
+        left:-100px;
+    }
+    /* top property was set even when the colors were to be hidden ?? */
+    .one{
+        top:200px;
+        transition: left 0.3s ease-in;
+    }
+    .two{
+        top:305px;
+        transition: left 0.6s ease-in;
+    }
+    .three{
+        top:410px;
+        transition: left 0.9s ease-in;
+    }
+    .four{
+        top:515px;
+        transition: left 1.2s ease-in;
+    }
+    .five{
+        top:620px;
+        transition: left 1.5s ease-in;
+    }
+    
+    /* had to set the top property again for all the colors because of:
+
+        #check:checked ~ .colorPalette .color{
+        top:290px;
+        }
+
+    */
+    #check:checked ~ .colorPalette .color{
+        top:200px;
+        left:100px;
+    }
+    #check:checked ~ .colorPalette .two{
+        top:305px;    
+    }
+    #check:checked ~ .colorPalette .three{
+        top:410px;   
+    }
+    #check:checked ~ .colorPalette .four{
+        top:515px;   
+    }
+    #check:checked ~ .colorPalette .five{
+        top:620px;   
+    }
+ 
+}

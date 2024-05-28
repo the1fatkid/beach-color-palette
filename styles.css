@@ -1,10 +1,10 @@
 body{
     height:100vh;
     background-image: url(beach.jpg);
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
     font-family: monospace;
-    overflow: hidden;
+    overflow:hidden;
 }
 h1{
     position: absolute;
@@ -104,23 +104,23 @@ div.click{
     }
     /* top property was set even when the colors were to be hidden ?? */
     .one{
-        top:200px;
+        top:160px;
         transition: left 0.3s ease-in;
     }
     .two{
-        top:305px;
+        top:265px;
         transition: left 0.6s ease-in;
     }
     .three{
-        top:410px;
+        top:370px;
         transition: left 0.9s ease-in;
     }
     .four{
-        top:515px;
+        top:475px;
         transition: left 1.2s ease-in;
     }
     .five{
-        top:620px;
+        top:580px;
         transition: left 1.5s ease-in;
     }
     
@@ -132,20 +132,20 @@ div.click{
 
     */
     #check:checked ~ .colorPalette .color{
-        top:200px;
+        top:160px;
         left:100px;
     }
     #check:checked ~ .colorPalette .two{
-        top:305px;    
+        top:265px;    
     }
     #check:checked ~ .colorPalette .three{
-        top:410px;   
+        top:370px;   
     }
     #check:checked ~ .colorPalette .four{
-        top:515px;   
+        top:475px;   
     }
     #check:checked ~ .colorPalette .five{
-        top:620px;   
+        top:580px;   
     }
  
 }
